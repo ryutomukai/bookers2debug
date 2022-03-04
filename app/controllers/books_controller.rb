@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-  before_action :ensure_current_user, {only: [:edit, :update]}
+  before_action :ensure_current_user, {only: [:edit, :update, :destroy]}
   def ensure_current_user
     @book = Book.find(params[:id])
     if current_user.id != @book.user_id
