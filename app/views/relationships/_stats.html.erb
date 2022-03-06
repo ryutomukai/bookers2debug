@@ -1,0 +1,13 @@
+<th>
+  <% user ||= current_user %>
+  <%= link_to user_followings_path(user) do %>
+    <%= user.followings.count %>following
+  <% end %>
+</th>
+<th>
+  <%= link_to user_followers_path(user) do %>
+    <%= user.followers.count %>followers
+  <% end %>
+</th>
+
+
