@@ -1,3 +1,4 @@
+$('.book_comments_counter').html("<%= j(render 'book_comments/counter', book: @comment.book) %>")
 <!--id="comments_areaにをrenderで指定した部分テンプレートに更新-->
 $("#comments_area").html("<%= j(render 'index', book: @book) %>");
 <!--フォームを送信したあとにフォームの値を空にします-->
